@@ -11,7 +11,7 @@
 
 ## Charts and Dashboards
 
-![linechart](/13-capstone-project/visualization/images/alpaca_live_stock_price.png)
-![barchart](/13-capstone-project/visualization/images/alpaca_live_stock_percent_change.png)
-![table](/13-capstone-project/visualization/images/alpaca_live_stock_tbl_updates.png)
-![db](/13-capstone-project/visualization/images/alpaca_live_dashboard.png)
+![linechart](./images/alpaca_live_stock_price.png)
+![barchart](./images/alpaca_live_stock_percent_change.png)
+![table](./images/alpaca_live_stock_tbl_updates.png)
+![db](./images/alpaca_live_dashboard.png)
