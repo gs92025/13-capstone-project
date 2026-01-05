@@ -18,7 +18,7 @@ BI analysts will consume the data via BI tools like Preset.
 
 ## Project Structure
 
-stream-elt/: End-to-end integration of streaming data pipelines for seamless data processing. See details here: [stream-elt](/13-capstone-project/stream-elt/)
+stream-elt/: End-to-end integration of streaming data pipelines for seamless data processing. See details here: [stream-elt](/stream-elt/)
 
     docker-compose.yml     # Docker setup
     Dockerfile             # Container build instructions
@@ -39,4 +39,4 @@ stream-elt/: End-to-end integration of streaming data pipelines for seamless dat
 
 ## Solution Architecture
 
-![architecture](/capstone-project/visualization/images/Architecture.png)
+![architecture](./visualization/images/Architecture.png)
