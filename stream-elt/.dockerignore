@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+.env               # secrets should not be baked into the image
+.idea/
+.vscode/

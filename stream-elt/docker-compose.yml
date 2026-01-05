@@ -1,0 +1,33 @@
+services:
+  producer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: market-bars-producer:latest
+
+    # Load environment from your local .env (no secrets in image)
+    env_file:
+      - .env
+
+    # Optional: override or add non-secret vars here
+    environment:
+      # TOPIC_NAME: ${TOPIC_NAME:-market_bars}
+      # FEED: ${FEED:-v2/iex}   # bars during reg trading hours 
+    #   FEED: ${FEED:-v2/test}
+    # Schema Registry (Confluent Cloud) 
+      SCHEMA_REGISTRY_URL: ${SCHEMA_REGISTRY_URL}
+      SR_API_KEY: ${SR_API_KEY}
+      SR_API_SECRET: ${SR_API_SECRET}
+
+    # Always restart unless you stop it manually
+    restart: unless-stopped
+
+    # Simple healthcheck: tries to resolve the bootstrap DNS
+    # (Validates basic network/DNS—does not test Kafka produce functionality)
+    healthcheck:
+      test: ["CMD-SHELL", "getent hosts $(echo $${CCLOUD_BOOTSTRAP_SERVERS} | cut -d: -f1) || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      
+
